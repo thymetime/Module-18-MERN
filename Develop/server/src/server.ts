@@ -11,7 +11,8 @@ app.use(express.json());
 
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
+  console.log(__dirname)
+  app.use(express.static(path.join(__dirname, '../../client')));
 }
 
 app.use(routes);
